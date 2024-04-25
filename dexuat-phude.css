@@ -1,0 +1,375 @@
+.dexuat-phude-wrap {
+    margin-top: 80px;
+    min-height: 100vh;
+    padding: 0 55px;
+    display: flex;
+    overflow-y: hidden;
+}
+
+.player-wrap {
+    width: 50%;
+    height: 100vh;
+    padding: 0 25px 0 0;
+    position: relative;
+}
+
+/*
+.lopphu {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}*/
+
+.player-wrap h3 {
+    margin: 15px 0;
+}
+
+.player-wrap h3 i {
+    margin-right: 5px;
+}
+
+.edit-wrap {
+    width: 50%;
+    position: relative;
+    pointer-events: none;
+}
+
+.box-save-sub {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.box-save-sub>div {
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.luu-bannhap {
+    margin-left: auto;
+    text-transform: uppercase;
+    color: #717171;
+}
+
+div.luu-phude {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #065fd4;
+    padding: 0 15px;
+    margin-right: 0;
+}
+
+.edit-content {
+    width: 100%;
+    height: 90vh;
+    background-color: #1c1d2f;
+    background-color: #101227;
+    margin: 15px 0 0 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.thanh-sub {
+    display: flex;
+    padding: 15px;
+    overflow-x: auto;
+    transform: rotateX(180deg);
+    user-select: none;
+}
+
+.in-thanhsub {
+    height: 100%;
+    position: relative;
+}
+
+.thanh-keo {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #717171;
+    left: 0;
+    top: 0;
+    font-size: 10px;
+    color: #717171;
+    cursor: col-resize;
+    scroll-behavior: smooth;
+}
+
+.thanh-cursor {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    height: 100%;
+    background-color: #717171;
+    width: 1px;
+    display: none;
+}
+
+.thanh-sub * {
+    transform: rotateX(180deg);
+}
+
+.thanh-sub .the-phude-item {
+    transform: rotateX(180deg);
+}
+
+/* Tùy chỉnh cho tất cả trình duyệt */
+.thanh-sub::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+.thanh-sub::-webkit-scrollbar-track {
+    background: #333;
+    /* Màu nền của track */
+}
+
+/* Handle */
+.thanh-sub::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+    /* Màu nền của handle */
+}
+
+/* Handle on hover */
+.thanh-sub::-webkit-scrollbar-thumb:hover {
+    background: #065fd4;
+    /* Màu nền của handle khi hover */
+}
+
+ul.thanh-sub-time {
+    width: 100%;
+    height: 36px;
+    display: flex;
+}
+
+ul.thanh-sub-time li {
+    display: flex;
+    margin: 0 0 0 0;
+    font-size: 12px;
+    list-style: none;
+    float: left;
+    width: 12000px;
+    color: #717171;
+    border-left: 1px solid #717171;
+    white-space: nowrap;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+ul.thanh-sub-time li div {
+    width: 100%;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    position: absolute;
+    left: 0;
+}
+
+ul.thanh-sub-time li div span {
+    border-right: 1px solid #717171;
+    width: calc(12000px / 10);
+}
+
+.the-phude {
+    margin: 15px 0;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #717171;
+    border-bottom: 1px solid #717171;
+    display: flex;
+    align-items: flex-end;
+}
+
+.the-phude span {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    height: 25px;
+    display: flex;
+    width: 12000px;
+    background-color: rgba(255, 255, 255, .3);
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 7px;
+    justify-content: space-between;
+}
+
+.the-phude span.resize {
+    background-color: #065fd4 !important;
+    box-shadow: inset 0 0 3px #fff;
+}
+
+.the-phude span i {
+    width: calc(100% - 2*5px);
+    transform: rotateX(0deg);
+    cursor: grab;
+}
+
+
+.keo-left,
+.keo-right {
+    width: 5px;
+    height: 100%;
+    cursor: e-resize;
+    top: 0;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.keo-left {
+    left: 0px;
+}
+
+.keo-right {
+    right: 0px;
+}
+
+.handle-right {
+    margin-left: auto;
+}
+
+.the-phude>span.active {
+    background-color: #01bdfc;
+}
+
+
+.nut-them-phude {
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nut-them-phude>span {
+    cursor: pointer;
+    color: #01bdfc;
+}
+
+ul.tyle-wrap {
+    display: flex;
+    align-items: center;
+}
+
+ul.tyle-wrap li {
+    list-style: none;
+    font-size: 12px;
+}
+
+.thanh-tyle-wrap {
+    width: 100px;
+    height: 100%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.thanh-tyle-box {
+    display: flex;
+    width: 100%;
+    height: 5px;
+    position: relative;
+    overflow: hidden;
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+.thanh-tyle-keo {
+    height: 100%;
+    width: 100%;
+    background-color: #065fd4;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 1px;
+}
+
+.khung-nhap-phude {
+    width: 100%;
+    height: calc(100% - 200px);
+    overflow-y: auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+/* Tùy chỉnh cho tất cả trình duyệt */
+.khung-nhap-phude::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+.khung-nhap-phude::-webkit-scrollbar-track {
+    background: #333;
+    /* Màu nền của track */
+}
+
+/* Handle */
+.khung-nhap-phude::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 5px;
+    /* Màu nền của handle */
+}
+
+/* Handle on hover */
+.khung-nhap-phude::-webkit-scrollbar-thumb:hover {
+    background: #065fd4;
+    /* Màu nền của handle khi hover */
+}
+
+.nhap-phude-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: #717171;
+    white-space: nowrap;
+}
+
+.nhap-phude-item.active {
+    background-color: #1c1d2f;
+}
+
+.nhap-phude-item textarea {
+    width: 70%;
+    height: 70px;
+    background-color: rgba(16, 18, 39, .5);
+    max-width: 70%;
+    min-width: 70%;
+    min-height: 70px;
+    color: rgba(255, 255, 255, .7);
+    padding: 5px;
+}
+
+.delete-phude {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nhap-phude-item-times {
+    width: 20%;
+    height: 100%;
+}
+
+.nhap-phude-item-times>div {
+    width: 100%;
+    height: calc(100% / 2);
+    border: 1px solid #717171;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}

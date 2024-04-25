@@ -1,0 +1,35 @@
+.video-toancuc {
+    width: 100%;height: auto;margin: 80px 0;
+}
+.video-toancuc>div {
+    width: 930px;height: 523px;margin: 0 auto;
+}
+.video-toancuc>h1 {
+    width: 930px;margin: 15px auto;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    
+}
+@media only screen and (min-width: 776px) and (max-width: 991px) {
+
+}
+@media only screen and (min-width: 576px) and (max-width: 775px) {
+
+}
+@media only screen and (max-width: 575px) {
+
+    .video-toancuc {
+        width: 100%;
+        padding: 0 5px;
+    }
+    .video-toancuc>div {
+        width: 100%;
+        height: auto;
+    }
+    .video-toancuc>h1 {
+        white-space: wrap;
+        width: 100%;
+        font-size: 14px;
+    }
+
+}

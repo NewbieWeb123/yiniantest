@@ -1,0 +1,143 @@
+.gioi-thieu {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 0;
+}
+
+.gioi-thieu h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.gioi-thieu1 {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.gioi-thieu1__left {
+    padding: 25px;
+    width: 50%;
+    display: flex;
+}
+
+.gioi-thieu1__left>img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.gioi-thieu1>ul {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    font-size: 18px;
+}
+
+.gioi-thieu1>ul>li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    padding: 5px 0;
+    cursor: context-menu;
+}
+
+.gioi-thieu1>ul>li.active {
+    color: #ff3f3f;
+    background-color: #2e2e33;
+}
+
+.gioi-thieu1>ul>li>div:first-child {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    font-weight: 600;
+}
+
+.gioi-thieu1>ul>li>div:last-child {
+    font-size: 20px;
+    width: calc(100% - 80px);
+    font-weight: 600;
+}
+
+.gioi-thieu1>ul>li>div:last-child>span {
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.gioi-thieu2 {
+    padding: 25px 50px;
+    background-color: #2e2e33;
+}
+
+.gioi-thieu2 p {
+    text-align: center;
+    padding: 5px 0;
+    font-size: 15px;
+}
+
+.gioi-thieu2>iframe {
+    width: 100%;
+    height: 100vh;
+    scrollbar-width: thin;
+}
+
+.gioi-thieu3 {
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.gioi-thieu3>div {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.gioi-thieu3>div::-webkit-scrollbar {
+    width: 0;
+}
+
+.gioi-thieu3>div ul {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.gioi-thieu3>div ul li {
+    list-style: none;
+    min-width: 404px;
+    width: 404px;
+    height: 300px;
+    padding: 15px;
+    margin: 15px;
+    background-color: #101027;
+}
+
+.gioi-thieu3>div ul li:hover {
+    border-bottom: 5px solid #ff3f3f;
+}
+
+@media only screen and (max-width: 1024px) {
+    .gioi-thieu {
+        zoom: 0.9;
+    }
+
+    .gioi-thieu1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .gioi-thieu1__left {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+
+    .gioi-thieu1>ul {
+        width: 100%;
+    }
+}
