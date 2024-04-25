@@ -1,0 +1,42 @@
+<div class="video-toancuc">
+    <h1></h1>
+    <div>
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+            <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0"
+                type="text/html" src="" width="100%" height="100%" allowfullscreen title="Dailymotion Video Player">
+            </iframe>
+        </div>
+    </div>
+</div>
+<script>
+    var params = new URLSearchParams(window.location.search);
+    var videotoancuc = params.get('video');
+    var playlisttoancuc = params.get('list');
+    var phamvi2 = localStorage.getItem('phamvi2');
+    if (phamvi2 != 'youtube') {
+        var videoId = videotoancuc; // Thay thế "x7lni3" bằng ID video của bạn
+        var url = "https://api.dailymotion.com/video/" + encodeURIComponent(videoId) + "?fields=title,duration,user";
+
+        $.ajax({
+            url: url,
+            dataType: "jsonp",
+            success: function (data) {
+                console.log("Tiêu đề: " + data.title);
+                console.log("Thời lượng: " + data.duration);
+                console.log("Người dùng: " + data.user);
+                $('.video-toancuc>h1').text(data.title);
+            }
+        });
+
+        $('iframe').attr('src', 'https://www.dailymotion.com/embed/video/' + videotoancuc + '?ui-start-screen-info=false')
+    } else if (phamvi2 == 'youtube') {
+        console.log(window.phamvi2)
+        if (videotoancuc && !playlisttoancuc) {
+            $('.video-toancuc>div').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/' + videotoancuc + '?si=RyMMvL9zLKlTz-99" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>');
+        } else if (playlisttoancuc && !videotoancuc) {
+            $('.video-toancuc>div').html('<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=' + videotoancuc + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+        }
+    } else {
+        //$('.video-toancuc>div').text('không có video này!');
+    }
+</script>
